@@ -8,13 +8,13 @@ server.set("views", "views");
 server.use(bodyParser.urlencoded());
 server.use(express.static("./public"));
 server.get("/create", (req, res, next) => {
+    console.log("/create");
     return res.sendFile(path.resolve(__dirname, "./create.html"));
 })
-server.get("/", (req, res, next) => {        
+server.get("/", (req, res, next) => {            
     return res.sendFile(path.resolve(__dirname, "./index.html"));    
 });
-server.post("/submit", (req, res, next) => {
-    console.log(req.body)
+server.post("/submit", (req, res, next) => {    
     return res.sendFile(path.resolve(__dirname, "./submit.html"));
 })
 
