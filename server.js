@@ -7,6 +7,9 @@ server.set("view engine", "pug");
 server.set("views", "views");
 server.use(bodyParser.urlencoded());
 server.use(express.static("./public"));
+server.get("/create", (req, res, next) => {
+    return res.sendFile(path.resolve(__dirname, "./create.html"));
+})
 server.get("/", (req, res, next) => {        
     return res.sendFile(path.resolve(__dirname, "./index.html"));    
 });

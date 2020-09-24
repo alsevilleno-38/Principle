@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap');
+$mod-back-test: none;
+@mixin btn-style($btn-type) {
+    @if $btn-type == ok {
+        color: #fff;
+        background-color: #007bff;
+        border-color: #007bff;  
+    }
+    @else if $btn-type == exit {
+        color: #fff;
+        background-color: #ffc107;
+        border-color: #ffc107;
+    }
+};
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.backdrop {
+    display: $mod-back-test;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+.modal {    
+    display: $mod-back-test;
+    position: absolute;
+    width: 30%;
+    height: 8.5rem;
+    background-color: #fff;
+    border-radius: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 200px;
+    padding: 2rem;
+    z-index: 15;
+}
+.modal-heading {
+    margin: auto;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.modal-btn {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    button {
+        cursor: pointer;
+        padding: 0.3rem 1rem;
+        outline: none;
+        border: none;
+        color: #fff;
+        border-radius: 3px;
+    }
+
+    #ok {
+        @include btn-style(ok);  
+        padding: 0.2rem 0.75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: 0.25rem;
+        text-align: center;
+        font-weight: 400;
+    }
+
+    #exit {    
+        @include btn-style(exit);  
+        padding: 0.2rem 0.75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: 0.25rem;
+        text-align: center;
+        font-weight: 400;
+    }
+}
+
+.close {
+    outline: none;
+    border: none;
+    position: absolute;
+    background-color: transparent;
+    font-size: 1rem;
+    top: 0;
+    right: 0;
+    margin: 0.3rem 0.6rem;
+    padding: 0;
+    cursor: pointer;
+    color: #555;
+    &:hover {
+        color: #000;
+    }
+}

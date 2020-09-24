@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+.collapsible {
+    display: flex;
+    flex-direction: column;
+    height: 15px;
+    justify-content: space-between;
+    width: 1.2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+.collapsible .line {
+    width: 1.2rem;
+    height: 1.7px;
+    background-color: #444;
+}
+.collapsible:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    position: absolute;
+    top: 1rem;
+    left: 5rem;
+    padding: 0.7rem;
+    background-color: #aaa;
+    transition: opacity 200ms;
+}
+.panel h4 {
+    margin-top: 0.4rem;
+}
+.special-box {
+    position: relative;
+    top: 10rem;
+}
+
+.box {
+    height: 2000vh;
+}
+.img {
+    background-image: url("/img/student.jpg");
+    width: 12rem;
+    height: 8rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    color: #fff;
+    line-height: 2rem;
+    opacity: 0.7;
+    background-attachment: local;
+}
+
+svg {
+    /* display: inline-block; */
+    width: 5rem;
+}
+.input-form {
+    margin: 1rem;
+}
+.input-form input[type="checkbox"] {
+    border: 1px solid #ccc;
+    width: 1rem;
+    height: 1rem;
+    background: #fff;
+    outline: none;
+    border: none;
+}
+.input-form input[type="checkbox"]:checked {    
+    appearance: none;    
+    background-color: #2ddf5c;
+    border: 1px solid #0e4f1f;
+}
+.input-form input[type="text"] {
+    appearance: none;
+    outline: none;
+    border: 1px solid #444;
+    outline: 1px solid #fff;
+    padding: 0.25rem 0.6rem;
+    transition: outline-color 200ms, border-color 200ms;
+}
+.input-form input[type="text"]:focus{
+    outline-color: aqua;
+    border-color: #2ddf5c;
+}
+.input-group-form {
+    display: flex;
+    flex-direction: row;
+    gap: 0.3rem;
+    align-items: center;
+}
