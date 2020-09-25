@@ -1,6 +1,4 @@
-alert("Command");
-$(() => {
-    $("#timer").on("click", (e) => {
-        alert("TIMER!");
-    })
-})
+function injectCode() {
+    var logo = document.querySelector("#logo");
+    logo.click();
+}
